@@ -11,7 +11,7 @@ import time
 
 engine = pyttsx3.init("sapi5")
 voices = engine.getProperty("voices")
-engine.setProperty("voice", voices[1].id)
+engine.setProperty("voice", voices[2].id)
 engine.setProperty("rate", 190)
 
 
@@ -52,15 +52,15 @@ def takeCommand():
 def WishMe():
     hour = int(datetime.datetime.now().hour)
     if hour >= 0 and hour < 12:
-        speak("Good Morning Sir!!")
+        speak("Good Morning Arghya!!")
 
     elif hour >= 12 and hour < 18:
-        speak("Good Afternoon Sir!!")
+        speak("Good Afternoon Arghya!!")
 
     else:
-        speak("Good Evening Sir!!")
+        speak("Good Evening Arghya!!")
 
-    speak("What may I do for you sir?")
+    speak("How may I help you?")
 
 
 def sendEmail(to, content):
@@ -82,7 +82,6 @@ if __name__ == "__main__":
 
         query = takeCommand().lower()
 
-        # Searching Wikipedia
 
         if "offline" in query:
             speak("Going offline Sir")
@@ -140,8 +139,8 @@ if __name__ == "__main__":
                 print(e)
                 speak("Unable to send this email Sir")
                 
-        elif "who are you" in query or "what are you" in query:
-            speak("I am Lucy sir. I am a virtual assisstant made by my master to ease him in his daily tasks")
+        elif "who are you" in query or "who are you" in query:
+            speak("I am Lucy sir. I am a virtual assisstant made by my master, Arghya, to ease him in his daily tasks")
             
             
         elif "take a screenshot" in query or "take screenshot" in query or "screenshot this" in query:
@@ -155,9 +154,9 @@ if __name__ == "__main__":
             
             
             
-        elif "volume up a bit" in query:
+        elif "volume up" in query:
             pyautogui.press('volumeup')
             
-        elif "volume up a bit" in query:
+        elif "volume down" in query:
             pyautogui.press('volumedown')
             
