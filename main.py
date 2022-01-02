@@ -98,7 +98,7 @@ if __name__ == "__main__":
         # Opening other links
 
         elif "open youtube" in query:
-            webbrowser.open("youtube.com")
+            webbrowser.get('C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe').open("youtube.com")
 
         elif "open google" in query:
             speak("Sir, what should I search on google?")
@@ -159,4 +159,7 @@ if __name__ == "__main__":
             
         elif "volume down" in query:
             pyautogui.press('volumedown')
+
+
+        
             
