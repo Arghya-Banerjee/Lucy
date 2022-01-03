@@ -1,3 +1,5 @@
+''' Imports from other modules installed to run Lucy '''
+
 import pyttsx3
 import datetime
 import speech_recognition as sr
@@ -8,8 +10,10 @@ import smtplib
 import pandas as pd
 import pyautogui
 import time
-
 from wikipedia.wikipedia import search
+
+''' Imports from web folder containing functions regarding web surfing '''
+
 from web.openGoogle import openGoogle
 from web.searchGoogle import searchGoogle   
 from web.openYoutube import openYoutube
@@ -17,14 +21,18 @@ from web.searchYoutube import searchYoutube
 
 engine = pyttsx3.init("sapi5")
 voices = engine.getProperty("voices")
-engine.setProperty("voice", voices[2].id)
+engine.setProperty("voice", voices[1].id)
 engine.setProperty("rate", 190)
 
 
-# Text to speech
-
-
 def speak(audio):
+    '''
+    speak - To convert text to voice output
+
+    Args:
+        audio (string): What it needs to speak
+    '''    
+
     engine.say(audio)
     engine.runAndWait()
 
@@ -33,6 +41,12 @@ def speak(audio):
 
 
 def takeCommand():
+    '''
+    takeCommand - To convert voice input to text
+
+    Returns:
+        [string]: What user said in microphone
+    '''
 
     r = sr.Recognizer()
     with sr.Microphone() as source:
@@ -52,16 +66,18 @@ def takeCommand():
     return query
 
 
-# Wishing Function for Lucy
-
 
 def WishMe():
+    '''
+    WishMe - To wish the user whenever this program starts
+    '''  
+
     hour = int(datetime.datetime.now().hour)
     if hour >= 0 and hour < 12:
         speak("Good Morning Arghya!!")
 
     elif hour >= 12 and hour < 18:
-        speak("Good Afternoon Arghya!!")
+        speak("Good Afternoon Arghya!!") 
 
     else:
         speak("Good Evening Arghya!!")
@@ -70,6 +86,14 @@ def WishMe():
 
 
 def sendEmail(to, content):
+    '''
+    sendEmail - To send email to someone
+
+    Args:
+        to (string): Email address
+        content (string): Content of the email
+    '''
+
     server = smtplib.SMTP("smtp.gmail.com", 587)
     server.ehlo()
     server.starttls()
@@ -78,7 +102,6 @@ def sendEmail(to, content):
     server.close()
 
 
-# Main program for Lucy
 
 if __name__ == "__main__":
 
@@ -171,6 +194,8 @@ if __name__ == "__main__":
             img.save(f"{name}.png")
             speak("Screenshot taken sir!")
             
+
+        # Volume up and down
             
             
         elif "volume up" in query:
