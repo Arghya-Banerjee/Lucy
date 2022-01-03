@@ -7,6 +7,8 @@ Lucy is not only a program to me but my best companion in my virtual world. Lucy
 ### More Info
 
 ![GitHub all releases](https://img.shields.io/github/downloads/crazycat-cyber/lucy/total?style=for-the-badge)
+![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/crazycat-cyber/lucy?include_prereleases&label=pre-release&style=for-the-badge)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/crazycat-cyber/lucy?style=for-the-badge)
 
 ## Installation
 
