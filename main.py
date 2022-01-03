@@ -8,6 +8,8 @@ import smtplib
 import pandas as pd
 import pyautogui
 import time
+from web.openGoogle import openGoogle
+from web.searchGoogle import searchGoogle   
 
 engine = pyttsx3.init("sapi5")
 voices = engine.getProperty("voices")
@@ -101,9 +103,15 @@ if __name__ == "__main__":
             webbrowser.get('C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe').open("youtube.com")
 
         elif "open google" in query:
-            speak("Sir, what should I search on google?")
-            cm = takeCommand().lower()
-            webbrowser.open(f"{cm}")
+            openGoogle()
+
+        elif "search google" in query:
+            
+            speak("What should I search for sir?")
+            searchQuery = takeCommand().lower()
+
+            searchGoogle(searchQuery)
+
 
         elif "open stack overflow" in query:
             webbrowser.open("stackoverflow.com")
