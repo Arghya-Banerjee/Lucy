@@ -1,7 +1,13 @@
 import webbrowser
 
 
-def searchGoogle(searchQuery):
+def searchYoutube(searchQuery):
+    '''
+    searchYoutube - Takes user input returns its in browser
+
+    Args:
+        searchQuery (string): What the user wants to search in Youtube
+    '''    
 
     edge_path="C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
     webbrowser.register('edge', None, webbrowser.BackgroundBrowser(edge_path))
