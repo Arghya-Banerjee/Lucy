@@ -9,6 +9,12 @@ import pandas as pd
 import pyautogui
 import time
 
+from wikipedia.wikipedia import search
+from web.openGoogle import openGoogle
+from web.searchGoogle import searchGoogle   
+from web.openYoutube import openYoutube
+from web.searchYoutube import searchYoutube
+
 engine = pyttsx3.init("sapi5")
 voices = engine.getProperty("voices")
 engine.setProperty("voice", voices[2].id)
@@ -98,12 +104,25 @@ if __name__ == "__main__":
         # Opening other links
 
         elif "open youtube" in query:
-            webbrowser.get('C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe').open("youtube.com")
+            openYoutube()
+
+        elif "search youtube" in query:
+            
+            speak("What should I search in youtube sir?")
+            searchQuery = takeCommand().lower()
+
+            searchYoutube(searchQuery)
 
         elif "open google" in query:
-            speak("Sir, what should I search on google?")
-            cm = takeCommand().lower()
-            webbrowser.open(f"{cm}")
+            openGoogle()
+
+        elif "search google" in query:
+            
+            speak("What should I search for sir?")
+            searchQuery = takeCommand().lower()
+
+            searchGoogle(searchQuery)
+
 
         elif "open stack overflow" in query:
             webbrowser.open("stackoverflow.com")
