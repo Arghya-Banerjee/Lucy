@@ -4,6 +4,9 @@ Lucy is my personal Virtual Assistant who eases me in doing all my daily works w
 
 Lucy is not only a program to me but my best companion in my virtual world. Lucy is as of this time not capable of talking using Artificial Intelligence but I will try to implement AI and ML into Lucy for her to become something more that just a program and become a real Assistant to me.
 
+### More Info
+
+![GitHub all releases](https://img.shields.io/github/downloads/crazycat-cyber/lucy/total?style=for-the-badge)
 
 ## Installation
 
