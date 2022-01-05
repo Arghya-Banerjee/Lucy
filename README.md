@@ -1,4 +1,4 @@
-![template](https://user-images.githubusercontent.com/72212592/147874174-36096b07-22c4-4732-9e25-458ddd5ce734.png)
+![lucy](https://user-images.githubusercontent.com/72212592/148195395-25d03c1c-e38f-45ed-82c1-c79f00ebbc65.png)
 
 Lucy is my personal Virtual Assistant who eases me in doing all my daily works with the help of voice commands. Lucy is my first big python project using tons of modules and different categories of coding in python.
 
