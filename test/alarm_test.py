@@ -24,12 +24,10 @@ if __name__ == '__main__':
     desH = int(input("Hour of your alarm?"))
     desM = int(input("Minute of your alarm?"))
 
-    Lag = True 
-
-    while Lag == True:
+    while True:
         alarm(desH, desM)
 
-        Lag == False
+        break
 
 
 
