@@ -19,7 +19,20 @@
         {"tag": "purpose",
             "patterns": ["why were you made?","What's your purpose","why did he made you?"],
             "responses": ["He made to ease him in his daily task", "", "What can I do for you?", "Greetings my friend"]
+        },
+        {"tag": "thanks",
+            "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+            "responses": ["Happy to help!", "Any time!", "My pleasure"]
+        },
+        {"tag": "noanswer",
+            "patterns": [],
+            "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"]
+        },
+        {"tag": "options",
+            "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
+            "responses": ["I can help you do things on your pc without touching it", "I can work for you according to your voice commands"]
         }
+
     ]
 
 }
