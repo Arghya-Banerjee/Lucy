@@ -1,9 +1,9 @@
 import webbrowser
 
 
-def openGoogle():  
+def openHackerrRnk():  
     '''
-    openGoogle - To open HackerRank dashboard in a New Tab
+    openHackerRank - To open HackerRank dashboard in a New Tab
     '''    
 
     urL='https://www.hackerrank.com/dashboard'

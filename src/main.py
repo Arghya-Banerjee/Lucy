@@ -1,5 +1,7 @@
-''' Imports from other modules installed to run Lucy '''
+''' Imports from other modules '''
 
+import os
+import sys
 import pyttsx3
 import datetime
 import speech_recognition as sr
@@ -14,16 +16,22 @@ from wikipedia.wikipedia import search
 
 ''' Imports from web folder containing functions regarding web surfing '''
 
+sys.path.append(os.path.abspath("E:\Lucy\web"))
+from functions.py import *
+
 from web.openGoogle import openGoogle
 from web.searchGoogle import searchGoogle   
 from web.openYoutube import openYoutube
 from web.searchYoutube import searchYoutube
+
+''' pyttsx3 initialization '''
 
 engine = pyttsx3.init("sapi5")
 voices = engine.getProperty("voices")
 engine.setProperty("voice", voices[1].id)
 engine.setProperty("rate", 190)
 
+''' Function definitions '''
 
 def speak(audio):
     '''
@@ -35,10 +43,6 @@ def speak(audio):
 
     engine.say(audio)
     engine.runAndWait()
-
-
-# Taking speech and converting to text
-
 
 def takeCommand():
     '''
