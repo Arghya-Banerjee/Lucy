@@ -17,12 +17,13 @@ from wikipedia.wikipedia import search
 ''' Imports from web folder containing functions regarding web surfing '''
 
 sys.path.append(os.path.abspath("E:\Lucy\web"))
-from functions.py import *
 
-from web.openGoogle import openGoogle
-from web.searchGoogle import searchGoogle   
-from web.openYoutube import openYoutube
-from web.searchYoutube import searchYoutube
+from web import *
+
+# from web.openGoogle import openGoogle
+# from web.searchGoogle import searchGoogle   
+# from web.openYoutube import openYoutube
+# from web.searchYoutube import searchYoutube
 
 ''' pyttsx3 initialization '''
 
@@ -128,27 +129,27 @@ if __name__ == "__main__":
             print(results)
             speak(results)
 
-        # Opening other links
+        # # Opening other links
 
-        elif "open youtube" in query:
-            openYoutube()
+        # elif "open youtube" in query:
+        #     openYoutube()
 
-        elif "search youtube" in query:
+        # elif "search youtube" in query:
             
-            speak("What should I search in youtube sir?")
-            searchQuery = takeCommand().lower()
+        #     speak("What should I search in youtube sir?")
+        #     searchQuery = takeCommand().lower()
 
-            searchYoutube(searchQuery)
+        #     searchYoutube(searchQuery)
 
-        elif "open google" in query:
-            openGoogle()
+        # elif "open google" in query:
+        #     openGoogle()
 
-        elif "search google" in query:
+        # elif "search google" in query:
             
-            speak("What should I search for sir?")
-            searchQuery = takeCommand().lower()
+        #     speak("What should I search for sir?")
+        #     searchQuery = takeCommand().lower()
 
-            searchGoogle(searchQuery)
+        #     searchGoogle(searchQuery)
 
 
         elif "open stack overflow" in query:

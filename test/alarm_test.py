@@ -1,5 +1,4 @@
 import datetime
-from typing_extensions import IntVar
 import plyer
 
 def alarm(desH, desM):
@@ -22,8 +21,8 @@ if __name__ == '__main__':
     desM = int(input("Minute of your alarm?"))
 
     while True:
-        alarm(desH, desM)
 
+        alarm(desH, desM)
         break
 
 
