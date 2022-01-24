@@ -9,16 +9,15 @@ import wikipedia
 import webbrowser
 import os
 import smtplib
-import pandas as pd
 import pyautogui
 import time
 from wikipedia.wikipedia import search
+from lucy.web.functions import openGoogle, openYoutube, openHackerRank, searchGoogle, searchYoutube
 
 ''' Imports from web folder containing functions regarding web surfing '''
 
-sys.path.append(os.path.abspath("E:\Lucy\web"))
 
-from web.functions import *
+from appOpens.functions import *
 
 # from web.openGoogle import openGoogle
 # from web.searchGoogle import searchGoogle   
@@ -153,7 +152,7 @@ if __name__ == "__main__":
 
 
         elif "open stack overflow" in query:
-            webbrowser.open("stackoverflow.com")
+            openHackerRank()
 
         elif "open hackerrank" in query:
             webbrowser.open("hackerrank.com")
