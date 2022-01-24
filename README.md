@@ -13,6 +13,7 @@ This program will not work in any other peoples computer as expected. Since I us
 
 ![GitHub all releases](https://img.shields.io/github/downloads/crazycat-cyber/lucy/total?style=for-the-badge)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/crazycat-cyber/lucy?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/arghya-banerjee/lucy?style=for-the-badge)
 
 ## Installation
 
