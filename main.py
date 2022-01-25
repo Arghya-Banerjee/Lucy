@@ -1,5 +1,4 @@
 import pyttsx3
-import datetime
 import speech_recognition as sr
 import wikipedia
 import webbrowser
@@ -8,6 +7,7 @@ import smtplib
 import pandas as pd
 import pyautogui
 import time
+<<<<<<< Updated upstream:main.py
 
 from wikipedia.wikipedia import search
 from web.openGoogle import openGoogle
@@ -33,27 +33,71 @@ def speak(audio):
 
 
 def takeCommand():
+=======
+from wikipedia.wikipedia import search
+from web.functions import openGoogle, openYoutube, openHackerRank, searchGoogle, searchYoutube
 
-    r = sr.Recognizer()
-    with sr.Microphone() as source:
-        print("Listening to ur beautiful Voice....")
-        r.pause_threshold = 1.0
-        r.energy_threshold = 400
-        audio = r.listen(source)
+''' Imports from web folder containing functions regarding web surfing '''
 
-    try:
-        print("Recognizing.....")
-        query = r.recognize_google(audio, language="en-in")
-        print("User said:", query, "\n")
 
-    except Exception as e:
-        print("Say that again please")
-        return "None"
-    return query
+from appOpens.functions import *
+from functions.functions import speak, takeCommand, wishMe
+
+# from web.openGoogle import openGoogle
+# from web.searchGoogle import searchGoogle   
+# from web.openYoutube import openYoutube
+# from web.searchYoutube import searchYoutube
+
+# ''' pyttsx3 initialization '''
+
+# engine = pyttsx3.init("sapi5")
+# voices = engine.getProperty("voices")
+# engine.setProperty("voice", voices[1].id)
+# engine.setProperty("rate", 190)
+
+# ''' Function definitions '''
+
+# def speak(audio):
+#     '''
+#     speak - To convert text to voice output
+
+#     Args:
+#         audio (string): What it needs to speak
+#     '''    
+
+#     engine.say(audio)
+#     engine.runAndWait()
+
+# def takeCommand():
+#     '''
+#     takeCommand - To convert voice input to text
+
+#     Returns:
+#         [string]: What user said in microphone
+#     '''
+>>>>>>> Stashed changes:lucy/main.py
+
+#     r = sr.Recognizer()
+#     with sr.Microphone() as source:
+#         print("Listening to ur beautiful Voice....")
+#         r.pause_threshold = 1.0
+#         r.energy_threshold = 400
+#         audio = r.listen(source)
+
+#     try:
+#         print("Recognizing.....")
+#         query = r.recognize_google(audio, language="en-in")
+#         print("User said:", query, "\n")
+
+#     except Exception as e:
+#         print("Say that again please")
+#         return "None"
+#     return query
 
 
 # Wishing Function for Lucy
 
+<<<<<<< Updated upstream:main.py
 
 def WishMe():
     hour = int(datetime.datetime.now().hour)
@@ -62,11 +106,24 @@ def WishMe():
 
     elif hour >= 12 and hour < 18:
         speak("Good Afternoon Arghya!!")
+=======
+# def WishMe():
+#     '''
+#     WishMe - To wish the user whenever this program starts
+#     '''  
 
-    else:
-        speak("Good Evening Arghya!!")
+#     hour = int(datetime.datetime.now().hour)
+#     if hour >= 0 and hour < 12:
+#         speak("Good Morning Arghya!!")
 
-    speak("How may I help you?")
+#     elif hour >= 12 and hour < 18:
+#         speak("Good Afternoon Arghya!!") 
+>>>>>>> Stashed changes:lucy/main.py
+
+#     else:
+#         speak("Good Evening Arghya!!")
+
+#     speak("How may I help you?")
 
 
 def sendEmail(to, content):
@@ -82,7 +139,7 @@ def sendEmail(to, content):
 
 if __name__ == "__main__":
 
-    WishMe()
+    wishMe()
 
     while True:
 
