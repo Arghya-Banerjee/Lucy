@@ -45,7 +45,6 @@ To deploy this project run
 
  - [Awesome Python Basic Tutorial](https://www.youtube.com/watch?v=aqvDTCpNRek&list=PLu0W_9lII9agICnT8t4iYVSZ3eykIAOME)
  - [Readme.so](https://readme.so/editor)
- - 
 ## Contributing
 
 Contributions are always welcome!
