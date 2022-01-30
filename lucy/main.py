@@ -12,11 +12,11 @@ import smtplib
 import pyautogui
 import time
 from wikipedia.wikipedia import search
-from web.functions import openGoogle, openYoutube, openHackerRank, searchGoogle, searchYoutube
+# from web.functions import openGoogle, openYoutube, openHackerRank, searchGoogle, searchYoutube
 
 ''' Imports from web folder containing functions regarding web surfing '''
 
-
+from web import openYoutube, openHackerRank, openGoogle, searchYoutube, searchGoogle
 from appOpens.functions import *
 
 # from web.openGoogle import openGoogle

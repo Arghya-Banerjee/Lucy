@@ -1,7 +1,7 @@
 import webbrowser
 
 
-def openHackerrRnk():  
+def openHackerRank():  
     '''
     openHackerRank - To open HackerRank dashboard in a New Tab
     '''    
