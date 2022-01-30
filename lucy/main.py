@@ -12,7 +12,7 @@ import smtplib
 import pyautogui
 import time
 from wikipedia.wikipedia import search
-from lucy.web.functions import openGoogle, openYoutube, openHackerRank, searchGoogle, searchYoutube
+from web.functions import openGoogle, openYoutube, openHackerRank, searchGoogle, searchYoutube
 
 ''' Imports from web folder containing functions regarding web surfing '''
 
