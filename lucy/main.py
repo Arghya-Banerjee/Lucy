@@ -152,10 +152,11 @@ if __name__ == "__main__":
 
 
         elif "open stack overflow" in query:
-            openHackerRank()
+            
+            webbrowser.open("stackoverflow.com")
 
         elif "open hackerrank" in query:
-            webbrowser.open("hackerrank.com")
+            openHackerRank()
 
         elif "the time now" in query:
             nowTime = datetime.datetime.now().strftime("%H:%M:%S")
