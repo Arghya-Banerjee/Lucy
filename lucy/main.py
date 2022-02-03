@@ -16,8 +16,12 @@ from wikipedia.wikipedia import search
 
 ''' Imports from web folder containing functions regarding web surfing '''
 
-from web import openYoutube, openHackerRank, openGoogle, searchYoutube, searchGoogle
-from appOpens.functions import *
+from lucy.webTasks import openYoutube, openHackerRank, openGoogle, searchYoutube, searchGoogle
+from lucy.appOpens import (
+    openCode,
+    openDiscord,
+    openSpotify,
+)
 
 # from web.openGoogle import openGoogle
 # from web.searchGoogle import searchGoogle   
@@ -163,16 +167,25 @@ if __name__ == "__main__":
             speak(f"Sir The time now is {nowTime}")
 
         elif "open code" in query:
-            codePath = "C:\\Users\\arghy\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
-            os.startfile(codePath)
+
+            openCode()
+
+            # codePath = "C:\\Users\\arghy\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+            # os.startfile(codePath)
 
         elif "open spotify" in query:
-            spotifyPath = "C:\\Users\\arghy\\AppData\\Roaming\\Spotify\\Spotify.exe"
-            os.startfile(spotifyPath)
+
+            openSpotify()
+
+            # spotifyPath = "C:\\Users\\arghy\\AppData\\Roaming\\Spotify\\Spotify.exe"
+            # os.startfile(spotifyPath)
 
         elif "open discord" in query:
-            discordPath = "C:\\Users\\arghy\\AppData\\Local\\Discord\\Update.exe --processStart Discord.exe"
-            os.startfile(discordPath)
+
+            openDiscord()
+
+            # discordPath = "C:\\Users\\arghy\\AppData\\Local\\Discord\\Update.exe --processStart Discord.exe"
+            # os.startfile(discordPath)
 
         elif "send email to arghya" in query:
             try:
